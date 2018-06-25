@@ -1,0 +1,23 @@
+.tell-phone>input{
+  background-color: #43B7E8 ;
+  color: #ffffff;
+  border: 0;
+  padding-left: 1.95rem;
+  padding-bottom:10px;
+  border-bottom:1px soild #ffffff; 
+}
+.tell-phone>input::-webkit-input-placeholder { /* WebKit browsers */ 
+color:rgba(255,255,255,0.4);
+} 
+.tell-phone>input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */ 
+color:rgba(255,255,255,0.4);
+} 
+
+.tell-phone>input::-moz-placeholder { /* Mozilla Firefox 19+ */ 
+color:rgba(255,255,255,0.4);
+
+} 
+.tell-phone>input:-ms-input-placeholder { /* Internet Explorer 10+ */ 
+color:rgba(255,255,255,0.4);
+} 
+
