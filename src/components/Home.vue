@@ -8,52 +8,55 @@
         <span><img :src="jewelImgUrl" alt=""><div>诚信务实</div></span>
       </div>
     
-
+          
       <div class="commpany">
-        <el-col :xs="24" :sm="24" :md="12" :lg="14" :xl="14">
+        <el-col :xs="24" :sm="24" :md="12" :lg="13" :xl="13" class="company-video">
           <div class="video-fa">
             <video id="video_all" src="http://ugcbsy.qq.com/uwMRJfz-r5jAYaQXGdGnC2_ppdhgmrDlPaRvaV7F2Ic/o0334mzhuun.p702.1.mp4?sdtfrom=v1010&amp;guid=e2f360e91b9fb1618b5fa8e19368d406&amp;vkey=991760CBBBB08D90BBDFCFBA4AFC01E050EEF2E3C23E21E3A3B320B0B7D8F7425A053CBD13B0523AADBEC6B69710787B8B419B98E5AA9D8FC8C57F46B3AD30AD0C3812172C9635C4EF7320E73156FB3F5F7BE2E962C42E85415035D197D6F07D8E295FA8FADFD9B9E1FDBD5FF63A4468F12C2412B78C99DA" controls = "true" poster="1.png" autoplay="false" webkit-playsinline="true" playsinline="true" x-webkit-airplay="allow" x5-video-player-type="h5" x5-video-player-fullscreen="true" x5-video-orientation="portraint"style="object-fit:fill"></video>
           </div>
         </el-col>
-        <el-col :xs="24" :sm="24" :md="12" :lg="10" :xl="10"><div class="grid-content bg-purple-light">
-          <div class="commpany-info">
-            <h2>公司介绍</h2><p> <span class="text-bg-color">上海恒义包装材料有限公司</span>   成立于2013年10月，为先进制造企业之一。我们是专业的设计师，制造商和出口商，<span class="text-bg-color">从事彩色胶印盒，喷墨打印盒，瓦楞纸箱，礼品盒，礼品袋，化妆品盒，定制纸箱/包装和包装配件的生产，开发和服务。</span> 我们位于上海市，交通便利。我们所有的产品都符合国际质量标准，并在全球各个不同的市场受到高度赞赏。<br/>我们有超过30名员工，超过4000平方米的工厂。在生产的各个阶段，设备齐全的设施和出色的质量控制使我们能够 <span class="text-bg-color">保证客户的满意度。</span><br/>我们与中国最大的专门从事儿童产品的上市公司集团合作。我们将一如既往地追求卓越品质，<span class="text-bg-color"> 愿为广大用户提供优质的产品和服务，携手共创美好未来。</span><br/></p>
-            <p class="us">我们真诚地 <span class="text-bg-color">欢迎世界各地的客户和朋友与我们联系，寻求合作共赢！</span></p>
-            <el-button round>立即联系</el-button>
-          </div></div></el-col>
+        <el-col :xs="24" :sm="24" :md="12" :lg="11" :xl="11" class="grid-content">
+          <div class="bg-purple-light">
+            <div class="commpany-info">
+              <h2 class="bolue-border">公司介绍</h2><p> <span class="text-bg-color">上海恒义包装材料有限公司</span>   成立于2013年10月，公司位于上海市奉贤区邬桥工业园<span class="text-bg-color">公司有一批技能精湛的技工团队及高素质的管理团队，</span> 便利的交通、舒适的办公环境、人性化管理模式、拥有5000平方米标准厂房及现代化的机器设备，让公司具备核心竞争力做倒可持续发展。</span>
+              <br/>我们主营产品有 <span class="text-bg-color">彩色纸箱、瓦楞纸箱、卡盒等。</span><br/>公司已获得《印刷经营许可证书》、《国际质量体系认证证书》等资质，同时在阿里巴巴国际站已开通上线，公司内部已经<span class="text-bg-color"> 上线ERP生产管理软件，做到订单可视化、生产可视化、设备生产过程中绩效可量化等。</span><br/>我们积极拥抱创新并严把质量关，全方位的售前、售后的跟踪服务是我们经营原则；<span>高品质产品、时效保障</span>是我们生存之道。我们生产产品全部符合国际质量标准，并在全球各个不同的市场受到高度赞赏。</p>
+              <el-button round class="Immediate-contact">立即联系</el-button>
+            </div>
+          </div>
+        </el-col>
       </div>
-      <div class="">
+      <div class="product">
         <el-col :xs="24" :sm="24" :md="10" :lg="10" :xl="10">
-          <div>
-            <h3>产品类型</h3>
-            <p>....</p>
+          <div class="productType">
+            <h3 class="bolue-border product-type">产品类型</h3>
+            <p>结实耐用or时尚美观or干净卫生or样式多变or暗藏玄机，您想要的我们都能提供。</p>
             <a href="http://www.baidu.com" tag="_black">前往1688查看更多 <img :src="rightArrow" alt=""></a>
           </div>
         </el-col>
-        <el-col :xs="24" :sm="24" :md="7" :lg="7" :xl="7">
-          <div class="pro-m">
-
-          </div>
+        <el-col :xs="24" :sm="24" :md="7" :lg="7" :xl="7" class="shadow-mask-fa">
+          <div class="pro-m"></div>
+          <div class="shadow-mask"></div>
+          <p>手提袋</p>
         </el-col>
-        <el-col :xs="24" :sm="24" :md="7" :lg="7" :xl="7">
-          <div class="pro-s">
-            
-          </div>
+        <el-col :xs="24" :sm="24" :md="7" :lg="7" :xl="7" class="shadow-mask-fa">
+          <div class="pro-s"></div>
+          <div class="shadow-mask"></div>
+          <p>礼品盒</p>
         </el-col>
-        <el-col :xs="24" :sm="24" :md="8" :lg="8" :xl="8">
-           <div class="pro-o">
-
-          </div>
+        <el-col :xs="24" :sm="24" :md="8" :lg="8" :xl="8" class="shadow-mask-fa">
+           <div class="pro-o"></div>
+           <div class="shadow-mask"></div>
+          <p>黄箱</p>
         </el-col>
-         <el-col :xs="24" :sm="24" :md="8" :lg="8" :xl="8">
-           <div class="pro-t">
-
-          </div>
+         <el-col :xs="24" :sm="24" :md="8" :lg="8" :xl="8" class="shadow-mask-fa">
+           <div class="pro-t"></div>
+           <div class="shadow-mask"></div>
+          <p>礼盒包装</p>
         </el-col>
-         <el-col :xs="24" :sm="24" :md="8" :lg="8" :xl="8">
-           <div class="pro-f">
-
-          </div>
+         <el-col :xs="24" :sm="24" :md="8" :lg="8" :xl="8" class="shadow-mask-fa">
+           <div class="pro-f"></div>
+           <div class="shadow-mask"></div>
+          <p>包装配件</p>
         </el-col>
       </div>
       <div class="product-w">
@@ -228,22 +231,29 @@ a {
 }
 .inter{
   display: flex;
-flex-direction: row;
-flex-wrap: wrap;
-justify-content: flex-start;
-align-items: center;
-align-content: center;
-margin: 3rem 0;
-span{
-display: inline-block;
-width: 33.33%;
-}
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+  margin: 3rem 0;
+  span{
+    display: inline-block;
+    width: 33.33%;
+  }
 }
 .commpany{
-  
+  height: 31rem;
+  margin:0 0 60px 0; 
 }
 .video-fa{
- 
+ height: 31rem;
+ video{
+   height:100%;
+ }
+}
+.grid-content{
+  height: 31rem;
 }
 #video_all{
   	object-fit: fill;
@@ -252,13 +262,13 @@ width: 33.33%;
     width: 100%;
 }
 .commpany-info{
-  padding:2% 10%;
+  padding:2% 5%;
   text-align: left;
   h2{
     text-align: left;
     font-size: 48px;
     font-weight: 900;
-    margin-bottom: 60px;
+    margin-bottom: 30px;
   }
   p{
    text-align: justify;
@@ -314,5 +324,81 @@ width: 33.33%;
      }
    }
 }
+.bolue-border{
+  text-decoration: underline;
+  font-size: 48px;
+  text-decoration-color:#43B7E8;
+  span{
+    display: inline-block;
+  }
+  .company-text{
 
+  }
+  .company-border{
+    width:100%;
+    height: 20px;
+    background-color: #43B7E8;
+  }
+}
+/* 立即联系 */
+.Immediate-contact{
+  margin-top: 40px;
+}
+/* 产品类型 */
+.productType{
+  p{
+    text-align: left;
+    width: 70%;
+    padding-left:10%;
+    margin-top: 47px;
+    margin-bottom: 73px;
+  }
+  a{
+    display: block;
+    width: 70%;
+    padding-left:10%;
+    text-align: left;
+  }
+}
+.product-type{
+  text-align: left;
+  padding-left:10%;
+  padding-top: 20%;
+}
+/* 图片遮罩 */
+.shadow-mask-fa{
+  position: relative;
+  overflow: hidden;
+   p{
+    position:absolute;
+    color: #ffffff;
+    top: 80%;
+    left:55%;
+    font-weight: 900;
+    font-size: 46px;
+    font-family: 'SourceHanSansCN-Medium';
+    opacity:0;
+  }
+  &:hover{
+    .pro-m, .pro-s, .pro-o, .pro-t, .pro-f{
+      transition: all 1s;
+      transform: scale(1.2);
+    }
+    p{
+      opacity:1;
+    }
+ }
+}
+.shadow-mask{
+  position:absolute;
+  opacity:1;
+  box-shadow:2px 0px 20px rgba(0,0,0,0.2);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height:100%;
+ &:hover{
+  background:rgba(0,0,0,0.5);
+ }
+}
 </style>
