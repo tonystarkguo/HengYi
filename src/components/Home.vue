@@ -7,15 +7,13 @@
         <span><img :src="integrityImgUrl" alt=""><div>质量保证</div></span>
         <span><img :src="jewelImgUrl" alt=""><div>诚信务实</div></span>
       </div>
-    
-          
       <div class="commpany">
-        <el-col :xs="24" :sm="24" :md="12" :lg="13" :xl="13" class="company-video">
+        <el-col :xs="24" :sm="12" :md="12" :lg="13" :xl="13" class="company-video">
           <div class="video-fa">
             <video id="video_all" src="http://ugcbsy.qq.com/uwMRJfz-r5jAYaQXGdGnC2_ppdhgmrDlPaRvaV7F2Ic/o0334mzhuun.p702.1.mp4?sdtfrom=v1010&amp;guid=e2f360e91b9fb1618b5fa8e19368d406&amp;vkey=991760CBBBB08D90BBDFCFBA4AFC01E050EEF2E3C23E21E3A3B320B0B7D8F7425A053CBD13B0523AADBEC6B69710787B8B419B98E5AA9D8FC8C57F46B3AD30AD0C3812172C9635C4EF7320E73156FB3F5F7BE2E962C42E85415035D197D6F07D8E295FA8FADFD9B9E1FDBD5FF63A4468F12C2412B78C99DA" controls = "true" poster="1.png" autoplay="false" webkit-playsinline="true" playsinline="true" x-webkit-airplay="allow" x5-video-player-type="h5" x5-video-player-fullscreen="true" x5-video-orientation="portraint"style="object-fit:fill"></video>
           </div>
         </el-col>
-        <el-col :xs="24" :sm="24" :md="12" :lg="11" :xl="11" class="grid-content">
+        <el-col :xs="24" :sm="12" :md="12" :lg="11" :xl="11" class="grid-content">
           <div class="bg-purple-light">
             <div class="commpany-info">
               <h2 class="bolue-border">公司介绍</h2><p> <span class="text-bg-color">上海恒义包装材料有限公司</span>   成立于2013年10月，公司位于上海市奉贤区邬桥工业园<span class="text-bg-color">公司有一批技能精湛的技工团队及高素质的管理团队，</span> 便利的交通、舒适的办公环境、人性化管理模式、拥有5000平方米标准厂房及现代化的机器设备，让公司具备核心竞争力做倒可持续发展。</span>
@@ -26,34 +24,34 @@
         </el-col>
       </div>
       <div class="product">
-        <el-col :xs="24" :sm="24" :md="10" :lg="10" :xl="10">
+        <el-col :xs="24" :sm="10" :md="10" :lg="10" :xl="10">
           <div class="productType">
             <h3 class="bolue-border product-type">产品类型</h3>
             <p>结实耐用or时尚美观or干净卫生or样式多变or暗藏玄机，您想要的我们都能提供。</p>
             <a href="http://www.baidu.com" tag="_black">前往1688查看更多 <img :src="rightArrow" alt=""></a>
           </div>
         </el-col>
-        <el-col :xs="24" :sm="24" :md="7" :lg="7" :xl="7" class="shadow-mask-fa">
+        <el-col :xs="24" :sm="7" :md="7" :lg="7" :xl="7" class="shadow-mask-fa">
           <div class="pro-m"></div>
           <div class="shadow-mask"></div>
           <p>手提袋</p>
         </el-col>
-        <el-col :xs="24" :sm="24" :md="7" :lg="7" :xl="7" class="shadow-mask-fa">
+        <el-col :xs="24" :sm="7" :md="7" :lg="7" :xl="7" class="shadow-mask-fa">
           <div class="pro-s"></div>
           <div class="shadow-mask"></div>
           <p>礼品盒</p>
         </el-col>
-        <el-col :xs="24" :sm="24" :md="8" :lg="8" :xl="8" class="shadow-mask-fa">
+        <el-col :xs="24" :sm="8" :md="8" :lg="8" :xl="8" class="shadow-mask-fa">
            <div class="pro-o"></div>
            <div class="shadow-mask"></div>
           <p>黄箱</p>
         </el-col>
-         <el-col :xs="24" :sm="24" :md="8" :lg="8" :xl="8" class="shadow-mask-fa">
+         <el-col :xs="24" :sm="8" :md="8" :lg="8" :xl="8" class="shadow-mask-fa">
            <div class="pro-t"></div>
            <div class="shadow-mask"></div>
           <p>礼盒包装</p>
         </el-col>
-         <el-col :xs="24" :sm="24" :md="8" :lg="8" :xl="8" class="shadow-mask-fa">
+         <el-col :xs="24" :sm="8" :md="8" :lg="8" :xl="8" class="shadow-mask-fa">
            <div class="pro-f"></div>
            <div class="shadow-mask"></div>
           <p>包装配件</p>
@@ -61,65 +59,60 @@
       </div>
       <div class="product-w">
         <el-col :xs="24" :sm="24" :md="24" :lg="24" :xl="24">
-           <h3>生产环境</h3>
-           <carousel :slides="slides" :inv="invTime"></carousel>
+           <div class="product-tit" > <h2  class="bolue-border">生产环境</h2></div>
+            <slider></slider>
         </el-col>
-        <el-col :xs="24" :sm="24" :md="24" :lg="24" :xl="24">
-           <h3>生产环境</h3>
-        </el-col>
-
       </div>
-      <div class="content-we">
-        <el-col :xs="24" :sm="24" :md="12" :lg="12" :xl="12">
-          <el-col :xs="1" :sm="1" :md="2" :lg="2" :xl="2"><span>&nbsp; </span></el-col>
-          <el-col :xs="24" :sm="24" :md="22" :lg="22" :xl="22">
-             <h3>联系我们</h3>
-             <p>在线提交您的需求，我们将在24小时与您联系，感谢支持</p>
-              <el-form :label-position="labelPosition" label-width="80px" :model="formLabelAlign">
-                <el-col :xs="24" :sm="12" :md="12" :lg="12" :xl="12">
-                  <el-form-item label="您的名字">
-                    <el-input v-model="formLabelAlign.name"></el-input>
-                  </el-form-item>
+      <!-- 电脑 -->
+      <div class="content-we" >
+        <el-col :xs="24" :sm="12" :md="12" :lg="12" :xl="12">
+          <div class="content-left">
+            <el-col  :xs="24" :sm="24":push="1" class="bolue-border contentUsTit">联系我们</el-col >
+             <el-col :xs="24" :sm="24":push="1" style="color:#999999 " class="contentUsTex">在线提交您的需求，我们将在24小时与您联系，感谢支持</el-col>
+              <el-col :xs="24" :sm="8" :md="8" :lg="8" :xl="8" :push="1">
+                <p class="name-content">您的名字</p>
+                <input type="text" class="inPut-bg inpu-content">
+              </el-col>
+              <el-col :xs="24" :sm="10" :md="10" :lg="12" :xl="12" :push="1">
+                <p  class="name-content">您的联系方式</p>
+                <input type="text" class="inPut-bg inpu-content">
+              </el-col>
+                <el-col :xs="22" :sm="20" :md="20" :lg="20" :xl="14" :push="1">
+                  <p class="name-content">您的内容</p>
+                  <textarea class="inPut-bg el-col-lg-24 el-col-xl-20 el-col-xs-20 el-col-sm-20" name="" id=""  rows="10" placeholder="" ></textarea>
                 </el-col>
-                <el-col :xs="24" :sm="12" :md="12" :lg="12" :xl="12">
-                  <el-form-item label="你的联系方式">
-                  <el-input v-model="formLabelAlign.region"></el-input>
-                </el-form-item>
+                <el-col :xs="24" :sm="24" :md="24" :lg="24" :xl="24" :push="1">
+                  <div class="btn-submit"><button class="btn-sub">提交</button></div>
                 </el-col>
-                <el-input  type="textarea" :rows="6"placeholder="请输入内容"v-model="formLabelAlign.type">
-                  </el-input>
-                <el-form-item>
-                <el-button type="primary" @click="submitForm('formLabelAlign')">提交</el-button>
-              </el-form-item>
-              </el-form>
-          </el-col>
-        </el-col>
-        <el-col :xs="24" :sm="24" :md="12" :lg="12" :xl="12">
+        
+          </div>
+         </el-col>
+        <el-col :xs="24" :sm="12" :md="12" :lg="12" :xl="12">
            <div class="contact">
               <el-col :xs="1" :sm="1" :md="2" :lg="2" :xl="2">
                <h3>&nbsp;</h3>
               </el-col>
               <el-col :xs="24" :sm="24" :md="22" :lg="22" :xl="22">
-               <h3>我们的联系方式</h3>
+               <h3 class="contentUsWay-tit">我们的联系方式</h3>
               </el-col>
               <el-col :xs="1" :sm="1" :md="2" :lg="2" :xl="2">
                <h3>&nbsp;</h3>
               </el-col>
-              <el-col :xs="24" :sm="24" :md="22" :lg="22" :xl="22">
-                  <p><img :src="PositionImg" alt="">No.1255-1, Puwei Highway, Zhuanghang Town, Fengxian District, Shanghai China</p>
-                  <p><img :src="EmailImg" alt="">hengyibz@126.com</p>
-                  <p><img :src="PhoneImg" alt="">+86-17721227066 (Yvonne Nie)</p>
-                  <p><img :src="TelephoneImg" alt="">86-021-67182993</p>
-                  <img :src="AddressImg" alt="">
+              <el-col :xs="24" :sm="24" :md="22" :lg="22" :xl="22" :push="1">
+                  <p class="contentUsWay-p"><img :src="PositionImg" alt="">No.1255-1, Puwei Highway, Zhuanghang Town, Fengxian District, Shanghai China</p>
+                  <p class="contentUsWay-p"><img :src="EmailImg" alt="">hengyibz@126.com</p>
+                  <p class="contentUsWay-p"><img :src="PhoneImg" alt="">+86-17721227066 (Yvonne Nie)</p>
+                  <p class="contentUsWay-p"><img :src="TelephoneImg" >86-021-67182993</p>
+                  <img :src="AddressImg" alt="地图" class="map">
               </el-col>
               
               
            </div>
         </el-col>
       </div>
+    
       
-    <h1>{{ msg }}</h1>
-    <Footers></Footers>
+      <footers></footers>
   </div>
 </template>
 
@@ -137,11 +130,12 @@ import Telephone from '../assets/telephone.png';
 import Address from '../assets/address.png';
 import carousel from './Carousel.vue';
 import Footers from './Footer.vue'
+import Slider from './Slider.vue'
 export default {
   name: 'HelloWorld',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App',
+      msg: '',
       clientImgUrl:client,
       integrityImgUrl:integrity,
       jewelImgUrl:jewel,
@@ -196,6 +190,7 @@ export default {
       Banner,
       carousel,
       Footers,
+      Slider,
   },
   methods: {
     submitForm(formName) {
@@ -244,7 +239,7 @@ a {
 }
 .commpany{
   height: 31rem;
-  margin:0 0 60px 0; 
+  margin:0 0 3rem 0; 
 }
 .video-fa{
  height: 31rem;
@@ -306,7 +301,7 @@ a {
    background-origin: border-box;
    background-size: cover;
    background-position: center center;
-   height: 480px;
+   height: 23rem;
 }
 .contact{
    background-image: url('../assets/contact_pic.png');
@@ -316,7 +311,7 @@ a {
    background-position: center center;
    color: #ffffff;
    text-align: left;
-   height: 450px;
+   height: 31rem;
    p{
      vertical-align: middle;
      img{
@@ -340,18 +335,31 @@ a {
     background-color: #43B7E8;
   }
 }
+.bg-purple-light{
+  height:31rem;
+}
+.product{
+  height:46rem;
+}
+.product-w{
+  height:27rem;
+}
+.content-left{
+  height:27rem;
+}
 /* 立即联系 */
 .Immediate-contact{
   margin-top: 40px;
 }
 /* 产品类型 */
 .productType{
+  height:23rem;
   p{
     text-align: left;
     width: 70%;
     padding-left:10%;
-    margin-top: 47px;
-    margin-bottom: 73px;
+    margin-top: 2.35rem;
+    margin-bottom: 3.65rem;
   }
   a{
     display: block;
@@ -363,7 +371,7 @@ a {
 .product-type{
   text-align: left;
   padding-left:10%;
-  padding-top: 20%;
+  padding-top: 5rem;
 }
 /* 图片遮罩 */
 .shadow-mask-fa{
@@ -400,5 +408,78 @@ a {
  &:hover{
   background:rgba(0,0,0,0.5);
  }
+}
+.product-tit{
+  height:12rem;
+  line-height: 12rem;
+}
+/* 联系我们 */
+.content-we{
+  margin-top:3rem;
+  height:31rem;
+}
+.contentUsTit{
+  text-align: left;
+}
+.contentUsTex{
+  text-align: left;
+}
+.inPut-bg{
+  background-color: #F2F5FA;
+}
+.name-content{
+  text-align: left;
+  font-size: 16px;
+}
+.inpu-content{
+  width:90%;
+  height:2.5rem;
+  border-radius:1.25rem;
+  margin-left: -10%;
+  padding:0 5px;
+  font-size: 16px;
+}
+.btn-sub{
+  width: 20%;
+  height: 2.5rem;
+  background-color: #43B7E8;
+  color: #ffffff;
+  border-radius:2.2rem;
+}
+.btn-submit{
+  text-align: left;
+  margin-top:2.4rem;
+}
+.contentUsWay-tit{
+  font-size: 1.5rem;
+  margin-top: 2.5rem;
+}
+.contentUsWay-p{
+  text-align: left;
+   font-size: 16px;
+   margin-bottom: 0.9rem;
+}
+.map{
+  height:9rem;
+}
+
+@media screen and (max-width: 768px){
+  .commpany{
+    height: 62rem;
+  }
+  .product{
+    height: 138rem;
+  }
+  .content-we{
+    height: 66rem;
+  }
+  .contact{
+    background-size: inherit;
+  }
+  .pro-m,.pro-s,.pro-o,.pro-t,.pro-f,.shadow-mask{
+    width: 90%;
+    margin:0 5%;
+    overflow: hidden;
+  }
 }
 </style>
