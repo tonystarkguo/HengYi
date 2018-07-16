@@ -1,7 +1,7 @@
 <!--  -->
 <template>
 <div>
-    <div class="footer">
+    <div class="footer" :style="{backgroundImage:BackImg}">
     <!-- <el-col :xs="24" :sm="24" :md="10" :lg="16" :xl="16" :push="0"> -->
       <img :src="logoImg" alt="">
       <p>恒义始终坚持以质量为生命、时间为信誉、价格为主要竞争力的经营信念。目前我们正与中国最大的专门从事儿童产品的上市集团公司合作，为广大用户提供优质的产品和服务，携手共创美好未来。我们将一如既往地追求卓越品质，愿我们真诚地欢迎国内外的客户和朋友与我们联系，寻求合作共赢！</p>
@@ -17,10 +17,12 @@
 
 <script>
 import logo from '../assets/logo.png';
+import back_foot from '../assets/black_foot.png';
 export default {
   data () {
     return {
       logoImg:logo,
+      BackImg:back_foot,
     };
   },
 

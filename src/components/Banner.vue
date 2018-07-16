@@ -1,15 +1,15 @@
 <!--  -->
 <template>
-  <div class="banner">
+  <div class="banner" :style="{backgroundImage:bgImg}">
      <el-col :xs="1" :sm="1" :md="20" :lg="18" :xl="18"class="hidden-sm-only hidden-sm-and-down konwmore">
        <div class="info">
-      <el-col  :offset="1":xs="10" :sm="10" :md="10" :lg="9" :xl="8">
-        <div class="grid-content bdblue lianxi">
-          <p >想了解更多，24小时内与您联系</p>
-          <el-input  placeholder="请输入您的联系方式"  v-model="input10"  max='11'  clearable class="bdblue tell-phone"></el-input>
-          <div class="bgW"></div>
-        </div>
-      </el-col>
+        <el-col  :offset="1":xs="10" :sm="10" :md="10" :lg="9" :xl="8">
+          <div class="grid-content bdblue lianxi">
+            <p >想了解更多，24小时内与您联系</p>
+            <el-input  placeholder="请输入您的联系方式"  v-model="input10"  max='11'  clearable class="bdblue tell-phone"></el-input>
+            <div class="bgW"></div>
+          </div>
+        </el-col>
       <el-col :xs="6" :sm="6" :md="5" :lg="5" :xl="4">
         <div class="grid-content bg-purple-light r-sure-help">
             <a href="javascript::void(0)">
@@ -19,10 +19,10 @@
             </a>
         </div>
       </el-col>
-    </div>
+      </div>
      </el-col>
-    
   </div>
+
 </template>
 
 <script>
@@ -35,6 +35,7 @@ export default {
     return {
       input10:"",
       blackArroe:black_arrow,
+      bgImg:bg,
     };
   },
   created () {

@@ -12,7 +12,7 @@
         <ul class="nav-list">
           <li><a href="javascript:void(0)" @click="navChange(0)" style="border-bottom:2px solid black">首页</a></li>
           <li><a href="javascript:void(0)" @click="navChange(1)">公司介绍</a></li>
-          <li><a href="https://hengyipackaging.en.alibaba.com" target=" _blank">产品类型</a></li>
+          <li><a href="/#/Product" target=" _blank">产品类型</a></li>
           <li><a href="javascript:void(0)" @click="navChange(3)">联系我们</a></li>
         </ul>
       </div>

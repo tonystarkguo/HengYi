@@ -14,7 +14,7 @@
             </nav>
         </el-row>
         <el-row>
-            <el-col :xs="12" :sm="6" :md="6" :lg="6" :xl="6" v-for=" val in showImgList">
+            <el-col :xs="12" :sm="6" :md="6" :lg="6" :xl="6" v-for=" (val,index) in showImgList" :key="index">
                 <div class="grid-content bg-purple-light">
                     <div class="grid-content-content">
                         <img :src="val" alt="" srcset="">
@@ -28,7 +28,7 @@
       <el-row>
           <el-col :xs="24" :sm="24" :md="24" :lg="24" :xl="24" >
                 <div class="pag">
-                    <el-pagination  background  layout="prev, pager, next"  :total="Length":page-size="12" @prev-click="prevPag" @current-change="currentPag" @next-click="nextPag"></el-pagination>
+                    <el-pagination  background  layout="prev, pager, next"  :total="Length":page-size="12" @prev-click="prevPag" @current-change="currentPag" @next-click="nextPag" ></el-pagination>
                 </div>
             </el-col>
       </el-row>
@@ -162,38 +162,38 @@ import	cot_52	from	"../assets/packagingAccessories/coloredtape/c (53).jpg"
 import	cot_53	from	"../assets/packagingAccessories/coloredtape/c (54).jpg"
 import	cot_54	from	"../assets/packagingAccessories/coloredtape/c (55).jpg"
 
-import	paperBag_01	from	"../assets/paperBag/ (1).jpg"
-import	paperBag_02	from	"../assets/paperBag/ (2).jpg"
-import	paperBag_03	from	"../assets/paperBag/ (3).jpg"
-import	paperBag_04	from	"../assets/paperBag/ (4).jpg"
-import	paperBag_05	from	"../assets/paperBag/ (5).jpg"
-import	paperBag_06	from	"../assets/paperBag/ (6).jpg"
-import	paperBag_07	from	"../assets/paperBag/ (7).jpg"
-import	paperBag_08	from	"../assets/paperBag/ (8).jpg"
-import	paperBag_09	from	"../assets/paperBag/ (9).jpg"
-import	paperBag_10	from	"../assets/paperBag/ (10).jpg"
-import	paperBag_11	from	"../assets/paperBag/ (11).jpg"
-import	paperBag_12	from	"../assets/paperBag/ (12).jpg"
-import	paperBag_13	from	"../assets/paperBag/ (13).jpg"
-import	paperBag_14	from	"../assets/paperBag/ (14).jpg"
-import	paperBag_15	from	"../assets/paperBag/ (15).jpg"
-import	paperBag_16	from	"../assets/paperBag/ (16).jpg"
-import	paperBag_17	from	"../assets/paperBag/ (17).jpg"
-import	paperBag_18	from	"../assets/paperBag/ (18).jpg"
-import	paperBag_19	from	"../assets/paperBag/ (19).jpg"
-import	paperBag_20	from	"../assets/paperBag/ (20).jpg"
-import	paperBag_21	from	"../assets/paperBag/ (21).jpg"
-import	paperBag_22	from	"../assets/paperBag/ (22).jpg"
-import	paperBag_23	from	"../assets/paperBag/ (23).jpg"
-import	paperBag_24	from	"../assets/paperBag/ (24).jpg"
-import	paperBag_25	from	"../assets/paperBag/ (25).jpg"
-import	paperBag_26	from	"../assets/paperBag/ (26).jpg"
-import	paperBag_27	from	"../assets/paperBag/ (27).jpg"
-import	paperBag_28	from	"../assets/paperBag/ (28).jpg"
-import	paperBag_29	from	"../assets/paperBag/ (29).jpg"
-import	paperBag_30	from	"../assets/paperBag/ (30).jpg"
-import	paperBag_31	from	"../assets/paperBag/ (31).jpg"
-import	paperBag_32	from	"../assets/paperBag/ (32).jpg"
+import	paperBag_01	from	"../assets/paperBag/1.jpg"
+import	paperBag_02	from	"../assets/paperBag/2.jpg"
+import	paperBag_03	from	"../assets/paperBag/3.jpg"
+import	paperBag_04	from	"../assets/paperBag/4.jpg"
+import	paperBag_05	from	"../assets/paperBag/5.jpg"
+import	paperBag_06	from	"../assets/paperBag/6.jpg"
+import	paperBag_07	from	"../assets/paperBag/7.jpg"
+import	paperBag_08	from	"../assets/paperBag/8.jpg"
+import	paperBag_09	from	"../assets/paperBag/9.jpg"
+import	paperBag_10	from	"../assets/paperBag/10.jpg"
+import	paperBag_11	from	"../assets/paperBag/11.jpg"
+import	paperBag_12	from	"../assets/paperBag/12.jpg"
+import	paperBag_13	from	"../assets/paperBag/13.jpg"
+import	paperBag_14	from	"../assets/paperBag/14.jpg"
+import	paperBag_15	from	"../assets/paperBag/15.jpg"
+import	paperBag_16	from	"../assets/paperBag/16.jpg"
+import	paperBag_17	from	"../assets/paperBag/17.jpg"
+import	paperBag_18	from	"../assets/paperBag/18.jpg"
+import	paperBag_19	from	"../assets/paperBag/19.jpg"
+import	paperBag_20	from	"../assets/paperBag/20.jpg"
+import	paperBag_21	from	"../assets/paperBag/21.jpg"
+import	paperBag_22	from	"../assets/paperBag/22.jpg"
+import	paperBag_23	from	"../assets/paperBag/23.jpg"
+import	paperBag_24	from	"../assets/paperBag/24.jpg"
+import	paperBag_25	from	"../assets/paperBag/25.jpg"
+import	paperBag_26	from	"../assets/paperBag/26.jpg"
+import	paperBag_27	from	"../assets/paperBag/27.jpg"
+import	paperBag_28	from	"../assets/paperBag/28.jpg"
+import	paperBag_29	from	"../assets/paperBag/29.jpg"
+import	paperBag_30	from	"../assets/paperBag/30.jpg"
+import	paperBag_31	from	"../assets/paperBag/31.jpg"
+import	paperBag_32	from	"../assets/paperBag/32.jpg"
 
 
 
@@ -213,7 +213,7 @@ export default {
         paperBag:[paperBag_01,paperBag_02,paperBag_03,paperBag_04,paperBag_05,paperBag_06,
 paperBag_07,paperBag_08,paperBag_09,paperBag_10,paperBag_11,paperBag_12,paperBag_13,paperBag_14,paperBag_15,paperBag_16,paperBag_17,paperBag_18,paperBag_19,paperBag_20,paperBag_21,paperBag_22,paperBag_23,paperBag_24,paperBag_25,paperBag_26,paperBag_27,paperBag_28,paperBag_29,
 paperBag_30,paperBag_31,paperBag_32,],
-        Length:26,
+        Length:32,
         showImgList:[paperBag_01,
 paperBag_02,
 paperBag_03,
@@ -250,7 +250,32 @@ paperBag_12,
         },
         productType(index){
             this.buttonClick=index;
-            this.Length=this.Packaging.length;
+            const self=this;
+            let list=[];
+            console.log(index)
+            switch (this.buttonClick) {
+                case 1:
+                    list=self.paperBag;
+                    break;
+                case 2:
+                    
+                    break;
+                case 3:
+                    list=self.Packaging;
+                    break;
+                case 4:
+                    
+                    break;
+                case 5:
+                    
+                    break;
+                default:
+                    break;
+            };
+            //   console.log(this.showImgList,list)
+              this.Length=list.length;
+             this.showImgList.splice(0);
+             this.showImgList=list.slice(0,12)
         },
         showPageImg(index){
             const self=this;
@@ -274,6 +299,7 @@ paperBag_12,
                 default:
                     break;
             };
+            this.Length=list.length;
              this.showImgList.splice(0);
              let upIndex=(index-1)*12;
              let endIndex=index*12;
@@ -290,7 +316,7 @@ paperBag_12,
         }
     },
 created () {
-    this.Length=this.Packaging.length;
+    this.Length=this.paperBag.length;
 }
 }
 

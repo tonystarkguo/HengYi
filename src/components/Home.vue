@@ -84,7 +84,7 @@
                 <el-col :xs="23" :sm="23" :md="23" :lg="23" :xl="23" :push="1">
                   <div class="btn-submit"><button class="btn-sub" @click="submitValue">提交</button></div>
                 </el-col>
-                <div class="total"><img :src="successImgUrl" alt=""><div>提交成功</div></div>
+                <div class="total" v-if="false"><img :src="successImgUrl" alt=""><div>提交成功</div></div>
           </div>
          </el-col>
         <el-col :xs="24" :sm="12" :md="12" :lg="12" :xl="12">
@@ -388,10 +388,10 @@ a {
    p{
     position:absolute;
     color: #ffffff;
-    top: 80%;
+    top: 75%;
     left:55%;
     font-weight: 900;
-    font-size: 46px;
+    font-size: 44px;
     font-family: 'SourceHanSansCN-Medium';
     opacity:0;
   }
