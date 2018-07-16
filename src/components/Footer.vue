@@ -64,7 +64,7 @@ p{
 }
 @media screen and (max-width: 768px){
   .footer{
-    height: 18rem;
+    height: 19rem;
   }
 }
 @media screen and (max-width: 375px){

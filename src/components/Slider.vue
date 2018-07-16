@@ -37,18 +37,27 @@ export default {
             ImgWidth:"",
             LeftImg:LeftImg,
             RightImg:rightImg,
+            pullleft:"",
+            maxIndex:"",
         }
     },
   methods: {
       nextPag(){
           const time=this.timeVal;
           this.index=this.index+1;
-          if(this.index>4){
+          let pullleft=this.pullleft;
+          const maxIndex=this.maxIndex;
+          if(this.index<=0){
               this.index=-1;
           }else{
               
           }
-            const left=(this.index+1)*20+"%";
+          if(this.index>maxIndex){
+              this.index=-1;
+          }else{
+              
+          }
+            const left=(this.index+1)*pullleft+"%";
           clearInterval(this.timeinter);
            $("#roll").animate({"margin-left":"-"+left,},500);
            this.play();
@@ -56,12 +65,13 @@ export default {
       prePag(){
           const time=this.timeVal;
           this.index=this.index-1;
+          let pullleft=this.pullleft;
           if(this.index<=0){
               this.index=-1;
           }else{
               
           }
-            const left=(this.index+1)*20+"%";
+            const left=(this.index+1)*pullleft+"%";
           clearInterval(this.timeinter);
            $("#roll").animate({"margin-left":"-"+left,},500);
            this.play();
@@ -70,14 +80,24 @@ export default {
       autoPlay(){},
       play(){
           const self=this;
+          let pullleft=20;
+          if($(window).width()<768){
+               pullleft=33.33;
+               this.maxIndex=6;
+          }else{
+               pullleft=20;
+                this.maxIndex=4;
+          };
+          const maxIndex=this.maxIndex;
+          this.pullleft=pullleft;
            this.timeinter=setInterval(function(){
                 const time=self.timeVal;
-                  console.log(self.index),
+                //   console.log(self.index),
                   self.index=self.index+1;
-                  if(self.index>4){
+                  if(self.index>maxIndex){
                         self.index=-1;
                     }
-                   const left=(self.index+1)*20+"%";
+                   const left=(self.index+1)*pullleft+"%";
                     $("#roll").animate({"margin-left":"-"+left,},1000);
             }, 2000);
       },
@@ -109,7 +129,15 @@ export default {
 		float: left;
         overflow: hidden;
         width: 10%;
-	}
+    }
+    @media screen and (max-width: 767px){
+        #roll{
+         width: 333.33%;
+        }
+        #roll dd{
+            width:10%;
+        }
+    }
 	.box span{
         position: absolute;
         bottom: 35%; 

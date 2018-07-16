@@ -37,8 +37,15 @@ export default {
       blackArroe:black_arrow,
     };
   },
+  created () {
+    const headerHeight=$(".header-list").height();
+  $(".banner").css({"margin-top":headerHeight});
+  }
 }
-
+window.onresize = function(){
+  const headerHeight=$(".header-list").height();
+  $(".banner").css({"margin-top":headerHeight});
+}
 </script>
 <style lang='less' scoped>
  .bannerFu(@width){
@@ -54,6 +61,7 @@ export default {
       background-origin: border-box;
       background-size: cover;
       position: relative;
+      margin-top: 5rem;
   }
   .info{
     position: absolute;
@@ -122,9 +130,6 @@ export default {
   }
 
   /*  */
- }
-@media screen and (max-width:767px) {
-  .bannerFu(13rem);
  }
 
 @media screen and (max-width:767px) {

@@ -5,6 +5,8 @@
   padding-left: 1.95rem;
   padding-bottom:10px;
   border-bottom:1px soild #ffffff; 
+  height: 30px;
+  line-height: 30px;
 }
 .tell-phone>input::-webkit-input-placeholder { /* WebKit browsers */ 
 color:rgba(255,255,255,0.4);

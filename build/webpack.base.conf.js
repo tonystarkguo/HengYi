@@ -52,12 +52,30 @@ module.exports = {
         include: [resolve('src'), resolve('test'), resolve('node_modules/webpack-dev-server/client')]
       },
       {
+        // test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
+        // loader: 'url-loader',
+        // options: {
+        //   limit: 10000,
+        //   name: utils.assetsPath('img/[name].[hash:7].[ext]')
+        // }
+
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
-        loader: 'url-loader',
-        options: {
-          limit: 10000,
-          name: utils.assetsPath('img/[name].[hash:7].[ext]')
-        }
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              limit: 10000,
+              name: utils.assetsPath('img/[name].[hash:7].[ext]')
+            }
+          },
+          {
+            loader: 'image-webpack-loader',// 压缩图片
+            options: {
+              bypassOnDebug: true,
+            }
+          }
+        ]
+
       },
       {
         test: /\.(mp4|webm|ogg|mp3|wav|flac|aac)(\?.*)?$/,
