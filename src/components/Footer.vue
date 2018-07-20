@@ -4,10 +4,10 @@
     <div class="footer" :style="{backgroundImage:BackImg}">
     <!-- <el-col :xs="24" :sm="24" :md="10" :lg="16" :xl="16" :push="0"> -->
       <img :src="logoImg" alt="">
-      <p>恒义始终坚持以质量为生命、时间为信誉、价格为主要竞争力的经营信念。目前我们正与中国最大的专门从事儿童产品的上市集团公司合作，为广大用户提供优质的产品和服务，携手共创美好未来。我们将一如既往地追求卓越品质，愿我们真诚地欢迎国内外的客户和朋友与我们联系，寻求合作共赢！</p>
-      <p><span>1688国际站了解详情</span><a href="http://https://hengyipackaging.en.alibaba.com ">https://hengyipackaging.en.alibaba.com </a></p>
-      <p><span>阿里巴巴站了解详情</span><a href="http://https://hengyipackaging.en.alibaba.com ">https://hengyipackaging.en.alibaba.com </a></p>      
-      <p class="end">Copyright ©2016-2020 | 上海恒义包装材料有限公司 | 沪ICP备1234567号-1</p>
+      <p>{{$t("m.FootText")}}</p>
+      <p><span>{{ $t("m.Inter")}}</span><a href="https://hengyipackaging.en.alibaba.com ">https://hengyipackaging.en.alibaba.com </a></p>
+      <p><span>{{ $t("m.alista")}}</span><a href="https://shop37918a2288047.1688.com/ ">https://shop37918a2288047.1688.com/</a></p>      
+      <p class="end"> Copyright ©2016-2020 | {{$t("m.Company")}} | <a href="http://www.miitbeian.gov.cn" target="_blank" style="color:#A7A9AB">沪ICP备15008437号-6 </a> </p>
     <!-- </el-col> -->
     
   </div>

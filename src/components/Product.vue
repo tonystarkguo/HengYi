@@ -1,14 +1,14 @@
 <!--  -->
 <template>
   <div>
-       <header><div><img :src="Loge" alt=""><span>上海恒义</span><el-button size="mini" style="padding:0">cn</el-button></div></header>
+       <header><div><img :src="Loge" alt=""><span>{{$t('m.comp')}}</span><el-button size="mini" style="padding:0"@click="changeLanguage">{{language}}</el-button></div></header>
        <el-row>
            <nav>
              <el-col :xs="23" :sm="23" :md="23" :lg="23" :xl="23" :push="1" class="hidden-xs-only">
-                <span @click="productType(1)" :class="{'active':buttonClick==1}">手提袋</span><span  @click="productType(2)"  :class="{'active':buttonClick==2}">礼品盒</span><span  @click="productType(3)" :class="{'active':buttonClick==3}">黄箱</span><span  @click="productType(4)" :class="{'active':buttonClick==4}">彩箱</span><span  @click="productType(5)" :class="{'active':buttonClick==5}">包装配件</span>           
+                <span @click="productType(1)" :class="{'active':buttonClick==1}">{{$t("m.Reticule")}}</span><span  @click="productType(2)"  :class="{'active':buttonClick==2}">{{$t("m.GiftBox")}}</span><span  @click="productType(3)" :class="{'active':buttonClick==3}">{{$t("m.YellowBox")}}</span><span  @click="productType(4)" :class="{'active':buttonClick==4}">{{$t("m.colorBox")}}</span><span  @click="productType(5)" :class="{'active':buttonClick==5}">{{$t("m.PackagingAccessories")}}</span>           
              </el-col>
             <el-col :xs="23" :sm="23" :md="23" :lg="23" :xl="23" :push="1" class="hidden-sm-and-up ">
-                <span @click="productType(1)" :class="{'active':buttonClick==1}">手提袋</span><span  @click="productType(2)"  :class="{'active':buttonClick==2}">礼品盒</span><span  @click="productType(3)" :class="{'active':buttonClick==3}">黄箱</span><span  @click="productType(4)" :class="{'active':buttonClick==4}">彩箱</span><span  @click="productType(5)" :class="{'active':buttonClick==5}">包装配件</span>           
+                <span @click="productType(1)" :class="{'active':buttonClick==1}">{{$t("m.Reticule")}}</span><span  @click="productType(2)"  :class="{'active':buttonClick==2}">{{$t("m.GiftBox")}}</span><span  @click="productType(3)" :class="{'active':buttonClick==3}">{{$t("m.YellowBox")}}</span><span  @click="productType(4)" :class="{'active':buttonClick==4}">{{$t("m.colorBox")}}</span><span  @click="productType(5)" :class="{'active':buttonClick==5}">{{$t("m.PackagingAccessories")}}</span>           
              </el-col>
              
             </nav>
@@ -18,7 +18,7 @@
                 <div class="grid-content bg-purple-light">
                     <div class="grid-content-content">
                         <img :src="val" alt="" srcset="">
-                        <div class="grid-content-title">手提袋</div>
+                        <div class="grid-content-title">{{index+1}}</div>
                     </div>
                 </div>
             </el-col>
@@ -28,17 +28,18 @@
       <el-row>
           <el-col :xs="24" :sm="24" :md="24" :lg="24" :xl="24" >
                 <div class="pag">
-                    <el-pagination  background  layout="prev, pager, next"  :total="Length":page-size="12" @prev-click="prevPag" @current-change="currentPag" @next-click="nextPag" ></el-pagination>
+                    <el-pagination  background :current-page="currentPage" layout="prev, pager, next"  :total="Length":page-size="12" @prev-click="prevPag" @current-change="currentPag" @next-click="nextPag" ></el-pagination>
                 </div>
             </el-col>
       </el-row>
      <footer>
           <img :src="Loge" alt="">
-            <p>恒义始终坚持以质量为生命、时间为信誉、价格为主要竞争力的经营信念。目前我们正与中国最大的专门从事儿童产品的上市集团公司合作，为广大用户提供优质的产品和服务，携手共创美好未来。我们将一如既往地追求卓越品质，愿我们真诚地欢迎国内外的客户和朋友与我们联系，寻求合作共赢！</p>
-            <p><span>1688国际站了解详情</span><a href="http://https://hengyipackaging.en.alibaba.com ">https://hengyipackaging.en.alibaba.com </a></p>
-            <p><span>阿里巴巴站了解详情</span><a href="http://https://hengyipackaging.en.alibaba.com ">https://hengyipackaging.en.alibaba.com </a></p>      
-            <p class="end">Copyright ©2016-2020 | 上海恒义包装材料有限公司 | 沪ICP备1234567号-1</p>
-
+            <img :src="logoImg" alt="">
+      <p>{{$t("m.FootText")}}</p>
+      <p><span>{{ $t("m.Inter")}}</span><a href="https://hengyipackaging.en.alibaba.com ">https://hengyipackaging.en.alibaba.com </a></p>
+      <p><span>{{ $t("m.alista")}}</span><a href="https://shop37918a2288047.1688.com/ ">https://shop37918a2288047.1688.com/</a></p>      
+      <p class="end"> Copyright ©2016-2020 | {{$t("m.Company")}} | <a href="http://www.miitbeian.gov.cn" target="_blank" style="color:#A7A9AB">沪ICP备15008437号-6 </a> </p>
+    
      </footer>
      
     
@@ -105,6 +106,28 @@ import	cor_5	from	"../assets/packagingAccessories/corrugatedblockdivider/6.jpg"
 import	cor_7	from	"../assets/packagingAccessories/corrugatedblockdivider/8.jpg"
 import	cor_8	from	"../assets/packagingAccessories/corrugatedblockdivider/9.jpg"
 import	cor_9	from	"../assets/packagingAccessories/corrugatedblockdivider/10.jpg"
+import	 cor_10  	from	"../assets/packagingAccessories/corrugatedblockdivider/11.jpg"
+import	 cor_11  	from	"../assets/packagingAccessories/corrugatedblockdivider/12.jpg"
+import	 cor_12  	from	"../assets/packagingAccessories/corrugatedblockdivider/13.jpg"
+import	 cor_13  	from	"../assets/packagingAccessories/corrugatedblockdivider/14.jpg"
+import	 cor_14  	from	"../assets/packagingAccessories/corrugatedblockdivider/15.jpg"
+import	 cor_15  	from	"../assets/packagingAccessories/corrugatedblockdivider/16.jpg"
+import	 cor_16  	from	"../assets/packagingAccessories/corrugatedblockdivider/17.jpg"
+// import	 cor_17  	from	"../assets/packagingAccessories/corrugatedblockdivider/18.jpg"
+import	 cor_18  	from	"../assets/packagingAccessories/corrugatedblockdivider/19.jpg"
+import	 cor_19  	from	"../assets/packagingAccessories/corrugatedblockdivider/20.jpg"
+import	 cor_20  	from	"../assets/packagingAccessories/corrugatedblockdivider/21.jpg"
+import	 cor_21  	from	"../assets/packagingAccessories/corrugatedblockdivider/22.jpg"
+import	 cor_22  	from	"../assets/packagingAccessories/corrugatedblockdivider/23.jpg"
+import	 cor_23  	from	"../assets/packagingAccessories/corrugatedblockdivider/24.jpg"
+import	 cor_24  	from	"../assets/packagingAccessories/corrugatedblockdivider/25.jpg"
+// import	 cor_25  	from	"../assets/packagingAccessories/corrugatedblockdivider/26.jpg"
+import	 cor_26  	from	"../assets/packagingAccessories/corrugatedblockdivider/27.jpg"
+import	 cor_27  	from	"../assets/packagingAccessories/corrugatedblockdivider/28.jpg"
+import	 cor_28  	from	"../assets/packagingAccessories/corrugatedblockdivider/29.jpg"
+import	 cor_29  	from	"../assets/packagingAccessories/corrugatedblockdivider/30.jpg"
+
+
 
 import	cot_00	from	"../assets/packagingAccessories/coloredtape/c (1).jpg"
 import	cot_01	from	"../assets/packagingAccessories/coloredtape/c (2).jpg"
@@ -195,13 +218,73 @@ import	paperBag_30	from	"../assets/paperBag/30.jpg"
 import	paperBag_31	from	"../assets/paperBag/31.jpg"
 import	paperBag_32	from	"../assets/paperBag/32.jpg"
 
+import giftBox_1 from '../assets/giftBox/1.jpg'
+import giftBox_2 from '../assets/giftBox/2.jpg'
+import giftBox_3 from '../assets/giftBox/3.jpg'
+import giftBox_4 from '../assets/giftBox/4.jpg'
+import giftBox_5 from '../assets/giftBox/5.jpg'
+import giftBox_6 from '../assets/giftBox/6.jpg'
+import giftBox_7 from '../assets/giftBox/7.jpg'
+import giftBox_8 from '../assets/giftBox/8.jpg'
+import giftBox_9 from '../assets/giftBox/9.jpg'
+import giftBox_10 from '../assets/giftBox/10.jpg'
+import giftBox_11 from '../assets/giftBox/11.jpg'
+import giftBox_12 from '../assets/giftBox/12.jpg'
+import giftBox_13 from '../assets/giftBox/13.jpg'
+import giftBox_14 from '../assets/giftBox/14.jpg'
+import giftBox_15 from '../assets/giftBox/15.jpg'
+import giftBox_16 from '../assets/giftBox/16.jpg'
+import giftBox_17 from '../assets/giftBox/17.jpg'
+import giftBox_18 from '../assets/giftBox/18.jpg'
+import giftBox_19 from '../assets/giftBox/19.jpg'
+import giftBox_20 from '../assets/giftBox/20.jpg'
+import giftBox_21 from '../assets/giftBox/21.jpg'
+import giftBox_22 from '../assets/giftBox/22.jpg'
+import giftBox_23 from '../assets/giftBox/23.jpg'
+import giftBox_24 from '../assets/giftBox/24.jpg'
+import giftBox_25 from '../assets/giftBox/25.jpg'
 
+import	color_1	from	'../assets/colorBox/1.jpg';
+import	color_2	from	'../assets/colorBox/2.jpg';
+import	color_3	from	'../assets/colorBox/3.jpg';
+import	color_4	from	'../assets/colorBox/4.jpg';
+import	color_5	from	'../assets/colorBox/5.jpg';
+import	color_6	from	'../assets/colorBox/6.jpg';
+import	color_7	from	'../assets/colorBox/7.jpg';
+import	color_8	from	'../assets/colorBox/8.jpg';
+import	color_9	from	'../assets/colorBox/9.jpg';
+import	color_10	from	'../assets/colorBox/10.jpg';
+import	color_11	from	'../assets/colorBox/11.jpg';
+import	color_12	from	'../assets/colorBox/12.jpg';
+import	color_13	from	'../assets/colorBox/13.jpg';
+import	color_14	from	'../assets/colorBox/14.jpg';
+import	color_15	from	'../assets/colorBox/15.jpg';
+import	color_16	from	'../assets/colorBox/16.jpg';
+import	color_17	from	'../assets/colorBox/17.jpg';
+import	color_18	from	'../assets/colorBox/18.jpg';
+import	color_19	from	'../assets/colorBox/19.jpg';
+import	color_20	from	'../assets/colorBox/20.jpg';
+import	color_21	from	'../assets/colorBox/21.jpg';
+import	color_22	from	'../assets/colorBox/22.jpg';
+import	color_23	from	'../assets/colorBox/23.jpg';
+import	color_24	from	'../assets/colorBox/24.jpg';
+import	color_25	from	'../assets/colorBox/25.jpg';
+import	color_26	from	'../assets/colorBox/26.jpg';
+import	color_27	from	'../assets/colorBox/27.jpg';
+import	color_28	from	'../assets/colorBox/28.jpg';
+import	color_29	from	'../assets/colorBox/29.jpg';
+import	color_30	from	'../assets/colorBox/30.jpg';
+import	color_31	from	'../assets/colorBox/31.jpg';
+import	color_32	from	'../assets/colorBox/32.jpg';
+import	color_33	from	'../assets/colorBox/33.jpg';
+import	color_34	from	'../assets/colorBox/34.jpg';
+import	color_35	from	'../assets/colorBox/35.jpg';
 
 export default {
   data () {
     return {
         Loge:logoImg,
-        Packaging:[cor_0,cor_1,cor_2,cor_3,cor_4,cor_5,cor_7,cor_8,cor_9,air_0,air_1,air_2,air_3,air_4,air_5,air_6,air_7,air_8,
+        Packaging:[air_0,air_1,air_2,air_3,air_4,air_5,air_6,air_7,air_8,
             bub_0,bub_1,bub_2,bub_3,bub_4,bub_5,bub_6,bub_7,bub_8,bub_9,bub_10,bub_11,bub_12,bub_13,bub_14,bub_15,bub_16,bub_17,col_0,
             col_1,col_2,col_3,col_4,col_5,col_6,col_7,col_8,col_9,col_10,
             cot_00,cot_01,cot_02,cot_03,cot_04,cot_05,cot_06,cot_07,cot_08,cot_09,cot_10,
@@ -213,6 +296,16 @@ export default {
         paperBag:[paperBag_01,paperBag_02,paperBag_03,paperBag_04,paperBag_05,paperBag_06,
 paperBag_07,paperBag_08,paperBag_09,paperBag_10,paperBag_11,paperBag_12,paperBag_13,paperBag_14,paperBag_15,paperBag_16,paperBag_17,paperBag_18,paperBag_19,paperBag_20,paperBag_21,paperBag_22,paperBag_23,paperBag_24,paperBag_25,paperBag_26,paperBag_27,paperBag_28,paperBag_29,
 paperBag_30,paperBag_31,paperBag_32,],
+        giftBox:[giftBox_1,giftBox_2,giftBox_3,giftBox_4,giftBox_5,giftBox_6,giftBox_7,giftBox_8,giftBox_9,giftBox_10,giftBox_11,giftBox_12,giftBox_13,giftBox_14,giftBox_15,giftBox_16,giftBox_17,giftBox_18,giftBox_19,giftBox_20,giftBox_21,giftBox_22,giftBox_23,giftBox_24,giftBox_25,],
+        yellowBox:[cor_0,cor_1,cor_2,cor_3,cor_4,cor_5,cor_7,cor_8,cor_9, cor_10,
+ cor_11, cor_12, cor_13, cor_14, cor_15, cor_16,  cor_18, cor_19, cor_20, cor_21, cor_22, cor_23, cor_24, cor_26,
+ cor_27, cor_28, cor_29,],
+        colorBox:[color_1,color_2,
+color_3,color_4,color_5,color_6,color_7,color_8,color_9,color_10,
+color_11,color_12,color_13,color_14,color_15,color_16,color_17,color_18,
+color_19,color_20,color_21,color_22,color_23,color_24,color_25,color_26,
+color_27,color_28,color_29,color_30,color_31,color_32,color_33,color_34,
+color_35,],
         Length:32,
         showImgList:[paperBag_01,
 paperBag_02,
@@ -229,6 +322,8 @@ paperBag_12,
 
 ],
         buttonClick:1,
+        language:"EN",
+        currentPage:1,
     };
   },
     components: {
@@ -258,16 +353,16 @@ paperBag_12,
                     list=self.paperBag;
                     break;
                 case 2:
-                    
+                    list=self.giftBox;
                     break;
                 case 3:
-                    list=self.Packaging;
+                    list=self.yellowBox;
                     break;
                 case 4:
-                    
+                 list=self.colorBox;
                     break;
                 case 5:
-                    
+                      list=self.Packaging;
                     break;
                 default:
                     break;
@@ -276,6 +371,7 @@ paperBag_12,
               this.Length=list.length;
              this.showImgList.splice(0);
              this.showImgList=list.slice(0,12)
+             this.currentPage=1;
         },
         showPageImg(index){
             const self=this;
@@ -285,16 +381,16 @@ paperBag_12,
                     list=self.paperBag;
                     break;
                 case 2:
-                    
+                    list=self.giftBox;
                     break;
                 case 3:
-                    list=self.Packaging;
+                     list=self.yellowBox;
                     break;
                 case 4:
-                    
+                    list=self.colorBox;
                     break;
                 case 5:
-                    
+                      list=self.Packaging;
                     break;
                 default:
                     break;
@@ -313,7 +409,17 @@ paperBag_12,
              console.log(upIndex,endIndex)
               this.showImgList=list.slice(upIndex,endIndex)
 
-        }
+        },
+        changeLanguage(){
+      // this.$i18n.locale="zh_CN";
+      if(this.language=="EN"){
+        this.language="CN";
+         this.$i18n.locale="en";
+      }else{
+        this.language="EN";
+         this.$i18n.locale="zh_CN";
+      }
+    },
     },
 created () {
     this.Length=this.paperBag.length;

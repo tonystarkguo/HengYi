@@ -114,7 +114,7 @@ export default {
 </script>
 <style lang='less' scoped>
     .box{
-        border: 1px solid red;
+        // border: 1px solid red;
         position: relative;
         display: inline-block;
         height: 15rem;

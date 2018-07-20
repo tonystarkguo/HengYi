@@ -3,9 +3,9 @@
       <Header></Header>
       <Banner/>
       <div class="inter">
-        <span><img :src="clientImgUrl" alt=""><div>客户第一</div></span>
-        <span><img :src="integrityImgUrl" alt=""><div>质量保证</div></span>
-        <span><img :src="jewelImgUrl" alt=""><div>诚信务实</div></span>
+        <span><img :src="clientImgUrl" alt=""><div>{{$t("m.CustomerFirst")}}</div></span>
+        <span><img :src="integrityImgUrl" alt=""><div>{{$t("m.QualityAssurance")}}</div></span>
+        <span><img :src="jewelImgUrl" alt=""><div>{{$t("m.Honesty")}}</div></span>
       </div>
       <div class="commpany">
         <el-col :xs="24" :sm="12" :md="12" :lg="13" :xl="13" class="company-video">
@@ -16,9 +16,8 @@
         <el-col :xs="24" :sm="12" :md="12" :lg="11" :xl="11" class="grid-content">
           <div class="bg-purple-light">
             <div class="commpany-info">
-              <h2 class="bolue-border">公司介绍</h2><p> <span class="text-bg-color">上海恒义包装材料有限公司</span>   成立于2013年10月，公司位于上海市奉贤区邬桥工业园<span class="text-bg-color">公司有一批技能精湛的技工团队及高素质的管理团队，</span> 便利的交通、舒适的办公环境、人性化管理模式、拥有5000平方米标准厂房及现代化的机器设备，让公司具备核心竞争力做倒可持续发展。</span>
-              <br/>我们主营产品有 <span class="text-bg-color">彩色纸箱、瓦楞纸箱、卡盒等。</span><br/>公司已获得《印刷经营许可证书》、《国际质量体系认证证书》等资质，同时在阿里巴巴国际站已开通上线，公司内部已经<span class="text-bg-color"> 上线ERP生产管理软件，做到订单可视化、生产可视化、设备生产过程中绩效可量化等。</span><br/>我们积极拥抱创新并严把质量关，全方位的售前、售后的跟踪服务是我们经营原则；<span>高品质产品、时效保障</span>是我们生存之道。我们生产产品全部符合国际质量标准，并在全球各个不同的市场受到高度赞赏。</p>
-              <el-button round class="Immediate-contact" @click="contentButton">立即联系</el-button>
+              <h2 class="bolue-border">{{$t("m.CompanyIntroduction")}}</h2><p>{{$t("m.CompanyText")}}</p>
+              <el-button round class="Immediate-contact" @click="contentButton">{{$t("m.ImmediateContact")}}</el-button>
             </div>
           </div>
         </el-col>
@@ -26,40 +25,41 @@
       <div class="product">
         <el-col :xs="24" :sm="10" :md="10" :lg="10" :xl="10">
           <div class="productType">
-            <h3 class="bolue-border product-type">产品类型</h3>
-            <p>结实耐用or时尚美观or干净卫生or样式多变or暗藏玄机，您想要的我们都能提供。</p>
-            <a href="https://hengyipackaging.en.alibaba.com" target=" _blank">前往1688查看更多 <img :src="rightArrow" alt=""></a>
+            <h3 class="bolue-border product-type">{{$t("m.ProductType")}}</h3>
+            <p>{{$t("m.productText")}}</p>
+            <a :href="$t('m.httpValue')" target=" _blank">{{$t("m.goto1688")}} <img :src="rightArrow" alt=""></a>
+            <!-- <a href="https://shop37918a2288047.1688.com/" target=" _blank">前往1688查看更多 <img :src="rightArrow" alt=""></a>          -->
           </div>
         </el-col>
         <el-col :xs="24" :sm="7" :md="7" :lg="7" :xl="7" class="shadow-mask-fa">
           <div class="pro-m"></div>
           <div class="shadow-mask"></div>
-          <p>手提袋</p>
+          <p>{{$t("m.Reticule")}}</p>
         </el-col>
         <el-col :xs="24" :sm="7" :md="7" :lg="7" :xl="7" class="shadow-mask-fa">
           <div class="pro-s"></div>
           <div class="shadow-mask"></div>
-          <p>礼品盒</p>
+          <p>{{$t("m.GiftBox")}}</p>
         </el-col>
         <el-col :xs="24" :sm="8" :md="8" :lg="8" :xl="8" class="shadow-mask-fa">
            <div class="pro-o"></div>
            <div class="shadow-mask"></div>
-          <p>黄箱</p>
+          <p>{{$t("m.YellowBox")}}</p>
         </el-col>
          <el-col :xs="24" :sm="8" :md="8" :lg="8" :xl="8" class="shadow-mask-fa">
            <div class="pro-t"></div>
            <div class="shadow-mask"></div>
-          <p>礼盒包装</p>
+          <p>{{$t("m.GiftBoxPackaging")}}</p>
         </el-col>
          <el-col :xs="24" :sm="8" :md="8" :lg="8" :xl="8" class="shadow-mask-fa">
            <div class="pro-f"></div>
            <div class="shadow-mask"></div>
-          <p>包装配件</p>
+          <p>{{$t("m.PackagingAccessories")}}</p>
         </el-col>
       </div>
       <div class="product-w">
         <el-col :xs="24" :sm="24" :md="24" :lg="24" :xl="24">
-           <div class="product-tit" > <h2  class="bolue-border">生产环境</h2></div>
+           <div class="product-tit" > <h2  class="bolue-border">{{$t("m.productionEnvironment")}}</h2></div>
             <slider></slider>
         </el-col>
       </div>
@@ -67,30 +67,30 @@
       <div class="content-we" >
         <el-col :xs="24" :sm="12" :md="12" :lg="12" :xl="12">
           <div class="content-left">
-            <el-col  :xs="23" :sm="23":push="1" class="bolue-border contentUsTit">联系我们</el-col >
-             <el-col :xs="23" :sm="23":push="1" style="color:#999999 " class="contentUsTex">在线提交您的需求，我们将在24小时与您联系，感谢支持</el-col>
+            <el-col  :xs="23" :sm="23":push="1" class="bolue-border contentUsTit">{{$t("m.ContactUs")}}</el-col >
+             <el-col :xs="23" :sm="23":push="1" style="color:#999999 " class="contentUsTex">{{$t("m.SubmitYouREquest")}}</el-col>
               <el-col :xs="23" :sm="8" :md="8" :lg="8" :xl="8" :push="1">
-                <p class="name-content">您的名字</p>
+                <p class="name-content">{{$t("m.YourName")}}</p>
                 <input type="text" class="inPut-bg inpu-content" v-model="name">
               </el-col>
               <el-col :xs="23" :sm="10" :md="10" :lg="12" :xl="12" :push="1">
-                <p  class="name-content">您的联系方式</p>
-                <input type="text" class="inPut-bg inpu-content" v-model="telNumber">
+                <p  class="name-content">{{$t("m.YourWayContact")}}</p>
+                <input type="text" class="inPut-bg inpu-content"  v-model="telNumber">
               </el-col>
                 <el-col :xs="22" :sm="20" :md="20" :lg="20" :xl="14" :push="1">
-                  <p class="name-content">您的内容</p>
+                  <p class="name-content">{{$t("m.YouContent")}}</p>
                   <textarea class="inPut-bg el-col-lg-24 el-col-xl-20 el-col-xs-20 el-col-sm-20" name="" id=""  rows="5" placeholder="" v-model="textVal"></textarea>
                 </el-col>
                 <el-col :xs="23" :sm="23" :md="23" :lg="23" :xl="23" :push="1">
-                  <div class="btn-submit"><button class="btn-sub" @click="submitValue">提交</button></div>
+                  <div class="btn-submit"><button class="btn-sub" @click="submitValue">{{$t("m.Submission")}}</button></div>
                 </el-col>
-                <div class="total" v-if="false"><img :src="successImgUrl" alt=""><div>提交成功</div></div>
+                <div class="total" v-if="submitSusessText"><img :src="successImgUrl" alt=""><div>{{$t("m.Submissionofsuccess")}}</div></div>
           </div>
          </el-col>
         <el-col :xs="24" :sm="12" :md="12" :lg="12" :xl="12">
            <div class="contact">
               <el-col :xs="22" :sm="22" :md="22" :lg="22" :xl="22" :push="2">
-               <h3 class="contentUsWay-tit">我们的联系方式</h3>
+               <h3 class="contentUsWay-tit">{{$t("m.ourContact")}}</h3>
               </el-col>
               <el-col :xs="22" :sm="22" :md="22" :lg="22" :xl="22" :push="2">
                   <p class="contentUsWay-p"><img :src="PositionImg" alt="">&nbsp;&nbsp; No.1255-1, Puwei Highway, Zhuanghang Town, Fengxian District, Shanghai China</p>
@@ -127,6 +127,7 @@ import Success from '../assets/success@2x.png';
 import carousel from './Carousel.vue';
 import Footers from './Footer.vue'
 import Slider from './Slider.vue';
+import api from '../getserver/aip.js'
 export default {
   name: 'HelloWorld',
   data () {
@@ -183,6 +184,7 @@ export default {
      name:"",
      telNumber:"",
      textVal:"",
+     submitSusessText:false,
     }
   },
   components:{
@@ -208,7 +210,28 @@ export default {
         $("html,body").animate({scrollTop:scrooltop},800);
       },
       submitValue(){
-
+      const self=this;
+       const  myreg=/^[1][3,4,5,7,8][0-9]{9}$/;
+       const myphone=/^\d{11,}$/
+        if(this.telNumber!=""&&myphone.test(this.telNumber)){
+          const obj={contact:this.telNumber,name:this.name,content:this.textVal};
+          api.postContent(obj).then((res)=>{
+              if(res.success){
+                 self.submitSusessText=true;
+                  const time= setTimeout(() => {
+                      self.submitSusessText=false;
+                      clearTimeout(time)
+                    }, 3000);
+                    self.telNumber="";
+                    self.name="";
+                    self.textVal="";
+              }
+          });
+       
+        }else{
+          this.$message.error('请填写手机号码');
+        }
+        
       },
   }
 }
@@ -386,14 +409,15 @@ a {
   position: relative;
   overflow: hidden;
    p{
-    position:absolute;
+    position: absolute;
     color: #ffffff;
-    top: 75%;
-    left:55%;
+    bottom: 0%;
+    left: 50%;
     font-weight: 900;
-    font-size: 44px;
+    font-size: 35px;
     font-family: 'SourceHanSansCN-Medium';
-    opacity:0;
+    opacity: 0;
+    width: auto;
   }
   &:hover{
     .pro-m, .pro-s, .pro-o, .pro-t, .pro-f{

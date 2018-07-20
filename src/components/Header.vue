@@ -3,17 +3,17 @@
   <el-row class="header-list">
     <el-col :xs="8" :sm="4" :md="4" :lg="10" :xl="8">
       <div class="header-left">
-        <span>上海恒义</span>
-        <el-button size="mini" style="padding:0">cn</el-button>
+        <span>{{$t("m.comp")}}</span>
+        <el-button size="mini" style="padding:0" @click="changeLanguage">{{language}}</el-button>
       </div>
     </el-col>
     <el-col :xs="16" :sm="20" :md="20" :lg="14" :xl="16" class="hidden-xs-only">
       <div class="height-right">
         <ul class="nav-list">
-          <li><a href="javascript:void(0)" @click="navChange(0)" style="border-bottom:2px solid black">首页</a></li>
-          <li><a href="javascript:void(0)" @click="navChange(1)">公司介绍</a></li>
-          <li><a href="/#/Product" target=" _blank">产品类型</a></li>
-          <li><a href="javascript:void(0)" @click="navChange(3)">联系我们</a></li>
+          <li><a href="javascript:void(0)" @click="navChange(0)" style="border-bottom:2px solid black">{{$t("m.HomePage")}}</a></li>
+          <li><a href="javascript:void(0)" @click="navChange(1)">{{$t("m.ProductIntroduction")}}</a></li>
+          <li><a href="/Product" target=" _blank">{{$t("m.ProductType")}}</a></li>
+          <li><a href="javascript:void(0)" @click="navChange(3)">{{$t("m.ContactUs")}}</a></li>
         </ul>
       </div>
     </el-col>
@@ -25,10 +25,10 @@
     <transition name="custom-classes-transition" enter-active-class="animated fadeIn" leave-active-class="animated  fadeOut">
         <el-col :xs="24" :sm="24" class="hidden-sm-and-up"  v-if="showMobileMenu" >
             <ul class="hidden-sm-and-up nav-list-mobileNav">
-              <li><a href="javascript:void(0)"  @click="navChange(0)">首页12</a></li>
-              <li><a href="javascript:void(0)"  @click="navChange(1)">公司介绍</a></li>
-              <li><a href="javascript:void(0)">产品类型</a></li>
-              <li><a href="javascript:void(0)"  @click="navChange(3)">联系我们</a></li>
+              <li><a href="javascript:void(0)"  @click="navChange(0)">{{$t("m.HomePage")}}</a></li>
+              <li><a href="javascript:void(0)"  @click="navChange(1)">{{$t("m.ProductIntroduction")}}</a></li>
+              <li><a href="javascript:void(0)">{{$t("m.ProductType")}}</a></li>
+              <li><a href="javascript:void(0)"  @click="navChange(3)">{{$t("m.ContactUs")}}</a></li>
             </ul>
         </el-col>
     </transition>
@@ -41,6 +41,7 @@ export default {
     return {
       tabPosition: 'top',
       showMobileMenu:false,
+      language:"EN",
     };
   },
   methods: {
@@ -67,6 +68,16 @@ export default {
         console.log( $(".commpany").offset().top,$(".header-left").height())
         $("html,body").animate({scrollTop:scrooltop},800);
          this.showMobileMenu=false;
+    },
+    changeLanguage(){
+      // this.$i18n.locale="zh_CN";
+      if(this.language=="EN"){
+        this.language="CN";
+         this.$i18n.locale="en";
+      }else{
+        this.language="EN";
+         this.$i18n.locale="zh_CN";
+      }
     },
   }
 }
@@ -97,7 +108,7 @@ export default {
           display:inline-block;
           height: @heightLeft*0.88/2;
           line-height: @heightLeft*0.88/2;
-          width: @heightLeft*0.75;
+          width:auto;
           font-size: 15px;
         }
     }

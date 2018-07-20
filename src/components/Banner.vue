@@ -5,22 +5,24 @@
        <div class="info">
         <el-col  :offset="1":xs="10" :sm="10" :md="10" :lg="9" :xl="8">
           <div class="grid-content bdblue lianxi">
-            <p >想了解更多，24小时内与您联系</p>
-            <el-input  placeholder="请输入您的联系方式"  v-model="input10"  max='11'  clearable class="bdblue tell-phone"></el-input>
+            <p >{{$t("m.KnowMore")}}</p>
+            <el-input  :placeholder="$t('m.KnowMore')"  v-model="input10"  max='11'  clearable class="bdblue tell-phone"></el-input>
             <div class="bgW"></div>
           </div>
         </el-col>
       <el-col :xs="6" :sm="6" :md="5" :lg="5" :xl="4">
         <div class="grid-content bg-purple-light r-sure-help">
-            <a href="javascript::void(0)">
-              <p class="moreKnow">确定</p>
+          <div  @click="submitValue">
+              <p class="moreKnow">{{$t("m.Determine")}}</p>
               <i></i>
-              <p>获得帮助与建议 <img :src="blackArroe" alt=""></p>
-            </a>
+              <p >{{$t("m.GetHelp")}} <img :src="blackArroe" alt=""></p>
+          </div>
+              
         </div>
       </el-col>
       </div>
      </el-col>
+         <div class="total" v-if="showSuccess"><img :src="successImgUrl" alt=""><div>{{$t("m.Submissionofsuccess")}}</div></div>
   </div>
 
 </template>
@@ -30,17 +32,43 @@ import bg from '../assets/banner.png';
 import black_arrow from '../assets/black_arrow@2x.png';
 import 'element-ui/lib/theme-chalk/display.css';
 import  '../css/common.css'
+import api from '../getserver/aip.js'
+import Success from '../assets/success@2x.png';
 export default {
   data () {
     return {
       input10:"",
       blackArroe:black_arrow,
       bgImg:bg,
+      successImgUrl:Success,
+      showSuccess:false,
     };
   },
   created () {
     const headerHeight=$(".header-list").height();
   $(".banner").css({"margin-top":headerHeight});
+  },
+  methods: {
+    submitValue(){
+           const self=this;
+       const  myreg=/^[1][3,4,5,7,8][0-9]{9}$/;
+        if(this.input10!=""&&this.input10.length>=11){
+          const obj={contact:this.input10,name:"",content:""};
+          api.postContent(obj).then((res)=>{
+              if(res.success){
+                  self.showSuccess=true;
+                  const time= setTimeout(() => {
+                      self.showSuccess=false;
+                      clearTimeout(time)
+                    }, 3000);
+                    self.input10="";
+              }
+          });
+        }else{
+          this.$message.error('请填写手机号码');
+        }
+        
+      },
   }
 }
 window.onresize = function(){
@@ -52,6 +80,7 @@ window.onresize = function(){
  .bannerFu(@width){
    .moreKnow{
       height: 2rem;
+      cursor: pointer;
     }
   .banner{
       width: 96%;
@@ -97,8 +126,9 @@ window.onresize = function(){
   .r-sure-help{
     background-color: #D5DFE8;
     height: 6.2rem;
-    a{
+    div{
       color: #1A1A1A;
+      cursor: pointer;
       >p:first-child{
         padding-top: 1rem;
         padding-left: 0.8rem;
@@ -129,6 +159,21 @@ window.onresize = function(){
     position:relative;
     height: 100%;
   }
+  .total{
+  position:absolute;
+  left: 42%;
+  bottom: 10%;
+  background-color: #43B7E8;
+  color: #ffffff;
+  width: 16%;
+  height: 12rem;
+  border-radius: 1rem;
+  z-index: 5;
+  img{
+    width: 30%;
+    margin-top:18%;
+  }
+}
 
   /*  */
  }
