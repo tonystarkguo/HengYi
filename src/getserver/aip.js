@@ -5,7 +5,7 @@ export default {
      * 用户登录
      */
     postContent(params) {
-        return fetch('/hengyi/mail/sendMail.do', params, "post")
+        return fetch('/mail/sendMail.do', params,"post")
     },
     
   

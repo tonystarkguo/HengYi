@@ -106,7 +106,7 @@ export default {
       const t=this.timeVal;
       const self=this;
       clearInterval(this.timeinter);
-    this.play();
+    // this.play();
   }
 
 };
@@ -119,6 +119,7 @@ export default {
         display: inline-block;
         height: 15rem;
         overflow: hidden;
+        width: 100%;
 	}
 	#roll{
         width: 200%;
@@ -143,7 +144,9 @@ export default {
         bottom: 35%; 
         left:5%; 
         display: inline-block;
-        width: 100px;
+        min-width:60px;
+        // width: 60px;
+        max-width: 100px;
         text-align: center;
         cursor: pointer;
         z-index: 90;

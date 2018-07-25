@@ -27,7 +27,7 @@
             <ul class="hidden-sm-and-up nav-list-mobileNav">
               <li><a href="javascript:void(0)"  @click="navChange(0)">{{$t("m.HomePage")}}</a></li>
               <li><a href="javascript:void(0)"  @click="navChange(1)">{{$t("m.ProductIntroduction")}}</a></li>
-              <li><a href="javascript:void(0)">{{$t("m.ProductType")}}</a></li>
+              <li><a href="/#/Product" target=" _blank">{{$t("m.ProductType")}}</a></li>
               <li><a href="javascript:void(0)"  @click="navChange(3)">{{$t("m.ContactUs")}}</a></li>
             </ul>
         </el-col>

@@ -1,8 +1,15 @@
 import { baseUrl } from '../config/env'
 import axios from 'axios'
 axios.defaults.timeout = 50000;            //响应时间
-axios.defaults.headers.post['Content-Type'] = 'application/json;charset=UTF-8';      //配置请求头
+ axios.defaults.headers.post['Content-Type'] = 'application/json;charset=UTF-8';      //配置请求头
 axios.defaults.headers.get['Content-Type'] = 'application/json;charset=UTF-8';      //配置请求头
+axios.defaults.headers['Content-Type'] = 'application/json;charset=UTF-8';      //配置请求头
+axios.defaults.headers.delete['Content-Type'] = 'application/json;charset=UTF-8'; 
+axios.defaults.headers.common['Content-Type'] = 'application/json;charset=UTF-8'; 
+axios.defaults.headers.patch['Content-Type'] = 'application/json;charset=UTF-8'; 
+axios.defaults.headers.put['Content-Type'] = 'application/json;charset=UTF-8'; 
+axios.defaults.headers.head['Content-Type'] = 'application/json;charset=UTF-8'; 
+axios.defaults.headers.common["Accept"] ="text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8"
 axios.defaults.baseURL = baseUrl;  //配置接口地址
 console.log(axios.defaults)
 axios.interceptors.request.use((config) => {
@@ -37,8 +44,15 @@ export function fetch(url, params,method="") {
     console.log(method)
     if (method == "" || method==="get"){
         return new Promise((resolve, reject) => {
-            axios.get(url, params)
-                .then(response => {
+            // params.headers
+           var $http = axios.create({
+                baseURL: url,
+                headers: {
+                    'Content-Type': 'application/json; charset=utf-8'
+                }
+            })
+            // params.headers['Content-Type'] = 'application/json;charset=UTF-8';  
+            $http.get(url, { "headers": { "Content-Type": "application/json; charset=utf-8" },params}).then(response => {
                     resolve(response.data);
                 }, err => {
                     reject(err);

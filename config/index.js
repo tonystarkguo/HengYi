@@ -12,7 +12,7 @@ module.exports = {
     assetsPublicPath: '/',
     proxyTable: {
       '/apis': {
-        target: 'http://112.124.0.159:80/',
+        target: 'http://www.hengyipack.com/',
         changeOrigin: true,
         pathRewrite: {
           '^/apis': ''
@@ -21,7 +21,7 @@ module.exports = {
     },
 
     // Various Dev Server settings
-    host: 'localhost', // can be overwritten by process.env.HOST
+    host: '192.168.1.146', // can be overwritten by process.env.HOST
     port: 8900, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
     autoOpenBrowser: true,
     errorOverlay: true,

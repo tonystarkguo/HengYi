@@ -10,7 +10,7 @@
       <div class="commpany">
         <el-col :xs="24" :sm="12" :md="12" :lg="13" :xl="13" class="company-video">
           <div class="video-fa">
-            <video id="video_all" src="//cloud.video.taobao.com/play/u/2153292369/p/1/e/6/t/10300/50137716747.mp4" controls = "true" poster="1.png" autoplay="false" webkit-playsinline="true" playsinline="true" x-webkit-airplay="allow" x5-video-player-type="h5" x5-video-player-fullscreen="true" x5-video-orientation="portraint"style="object-fit:fill"></video>
+            <video id="video_all" src="//cloud.video.taobao.com/play/u/2153292369/p/1/e/6/t/10300/50137716747.mp4" controls = "true"  webkit-playsinline="true" playsinline="true" x-webkit-airplay="allow" x5-video-player-type="h5" x5-video-player-fullscreen="true" x5-video-orientation="portraint"style="object-fit:fill"></video>
           </div>
         </el-col>
         <el-col :xs="24" :sm="12" :md="12" :lg="11" :xl="11" class="grid-content">
@@ -215,8 +215,16 @@ export default {
        const myphone=/^\d{11,}$/
         if(this.telNumber!=""&&myphone.test(this.telNumber)){
           const obj={contact:this.telNumber,name:this.name,content:this.textVal};
-          api.postContent(obj).then((res)=>{
-              if(res.success){
+           $.ajax({
+              type: "post",  
+              url: "http://www.hengyipack.com/mail/sendMail.do",
+              data: JSON.stringify(obj),
+              headers: {
+                  'Accept': 'application/json',
+                  'Content-Type': 'application/json'
+                },
+              success: function (result) {  
+                if (result.success) {
                  self.submitSusessText=true;
                   const time= setTimeout(() => {
                       self.submitSusessText=false;
@@ -225,8 +233,24 @@ export default {
                     self.telNumber="";
                     self.name="";
                     self.textVal="";
+              
+                } else {
+                  console.log("获取失败")
+                }
               }
-          });
+            });
+          // api.postContent(obj).then((res)=>{
+          //     if(res.success){
+          //        self.submitSusessText=true;
+          //         const time= setTimeout(() => {
+          //             self.submitSusessText=false;
+          //             clearTimeout(time)
+          //           }, 3000);
+          //           self.telNumber="";
+          //           self.name="";
+          //           self.textVal="";
+          //     }
+          // });
        
         }else{
           this.$message.error('请填写手机号码');
